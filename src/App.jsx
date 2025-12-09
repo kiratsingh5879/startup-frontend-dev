@@ -17,6 +17,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Signup from "./pages/Signup";
 
 ////////////////////////////////////////
 //      Components & Page Imports     //
@@ -36,6 +37,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </div>
   );
@@ -45,6 +47,7 @@ const App = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+  
   return (
     <Router>
       <AppContent />
