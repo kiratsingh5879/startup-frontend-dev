@@ -36,7 +36,9 @@ import CounsellorSignup from "./pages/counserlor-signup/CounsellorSignup";
 const AppContent = () => {
   const location = useLocation();
   const hideNavbar =
-    location.pathname === "/admin/login" || "/counsellor/signup";
+    location.pathname === "/admin/login" ||
+    location.pathname === "/signup" ||
+    location.pathname === "/counsellor/signup";
 
   return (
     <div>

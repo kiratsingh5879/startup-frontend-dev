@@ -1,11 +1,8 @@
-import Testimonials from "../components/ui/testimonials/testimonials";
+import { Navbar } from "../components";
+import Testimonials from "../components/ui/testimonials/Testimonials";
 
 const Home = () => {
-  return (
-    <div>
-      <Testimonials />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Home;
