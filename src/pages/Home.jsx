@@ -1,5 +1,11 @@
+import { DoctorUI } from '../components';
+
 const Home = () => {
-  return <></>;
+  return (
+    <>
+      <DoctorUI />
+    </>
+  );
 };
 
 export default Home;
