@@ -56,8 +56,7 @@ const AppContent = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/thanks" element={<ThanksCard />} />
         <Route path="/about" element={<AboutUs/>}/>
-          <Route path="/about-doctor" element={<AboutTheDoctor />} />
-
+        <Route path="/about-doctor" element={<AboutTheDoctor />} />
         <Route path="/forgot" element={<ForgotPassword />} />
         <Route path="/verify-otp" element={<VerifyOTP />} />
         <Route path="/reset-password" element={<ResetPassword />} />
