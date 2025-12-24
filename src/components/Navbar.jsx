@@ -108,9 +108,16 @@ const Navbar = () => {
                 <li className='text-white mx-5'>Home</li>
               </Link>
               <Link to='/about-us'>
-                <li className='text-white mx-5'>About</li>
+                <li className='text-white mx-5'>Services</li>
               </Link>
-              <li className='text-white mx-5'>Services</li>
+              <Link to='/login'>
+                <li
+                  onClick={() => setMobileDisplay(false)}
+                  className='text-white mx-5'
+                >
+                  Login
+                </li>
+              </Link>
             </ul>
           </div>
         </div>

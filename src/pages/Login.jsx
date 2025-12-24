@@ -63,6 +63,7 @@ export default function Login() {
       if (res?.message === 'Login successful') {
         toast.success('Login successful');
         navigate('/');
+        window.scrollTo(0, 0);
       }
     } catch (error) {
       toast.dismiss(loadingToast);
