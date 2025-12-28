@@ -132,7 +132,7 @@ const Signup = () => {
   useTitle('Join');
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/");
+      navigate('/');
     }
   });
   const [showCalendar, setShowCalendar] = useState(false);
@@ -197,7 +197,10 @@ const Signup = () => {
   };
 
   return (
-    <div className='relative min-h-screen bg-white overflow-hidden'>
+    <div
+      data-aos='fade-left'
+      className='relative min-h-screen bg-white overflow-hidden'
+    >
       {/* Desktop Safe Harbour */}
       <div className='hidden md:block absolute top-[60px] left-[60px] text-[#8473E8] text-[22px] font-bold'>
         Safe Harbour

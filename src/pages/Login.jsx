@@ -112,7 +112,10 @@ export default function Login() {
   }, [isAuthenticated]);
 
   return (
-    <div className='relative min-h-screen bg-white flex flex-col lg:flex-row overflow-hidden'>
+    <div
+      data-aos='fade-right'
+      className='relative min-h-screen bg-white flex flex-col lg:flex-row overflow-hidden'
+    >
       {/* MOBILE PURPLE ARC */}
       <div className='lg:hidden w-full bg-[#8E76F2] h-[220px] rounded-b-[200px] flex flex-col justify-center items-center'>
         <h1 className='montserrat text-center text-3xl font-semibold text-white px-6'>
