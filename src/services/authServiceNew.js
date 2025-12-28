@@ -58,7 +58,9 @@ export const sendEmailVerificationOtp = asyncHandler(async (email) => {
 });
 
 export const sendPasswordResetOtp = asyncHandler(async (email) => {
-  const res = await api.post(`/api/user/password-reset-otp/${email}`);
+  const res = await api.post(`/api/user/password-reset-otp`, {
+    Email: email,
+  });
   return res;
 });
 
@@ -72,6 +74,6 @@ export const resetPassword = asyncHandler(async (pass, confPass, email) => {
     Email: email,
     newPassword: confPass,
   });
-  console.log("🚀 ~ res:", res)
+  console.log('🚀 ~ res:', res);
   return res;
 });
