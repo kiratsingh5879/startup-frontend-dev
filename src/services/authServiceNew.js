@@ -1,6 +1,7 @@
 import { toast } from 'react-toastify';
 import { asyncHandler } from '../utils/async-handler';
 import api from './apiClient';
+import { useAuthStore } from '../store/auth-store';
 
 export const signupUser = asyncHandler(
   async (fullname, email, password, phone, dob, gender, timezone, language) => {
@@ -18,6 +19,21 @@ export const signupUser = asyncHandler(
     return res.data;
   },
 );
+
+export const checkAuth = asyncHandler(async () => {
+  const res = await api.get('/api/current-user');
+  console.log('🚀 ~ res:', res.data);
+  return res.data;
+});
+
+export const logout = asyncHandler(async () => {
+  const res = await api.post('/logout');
+  if (res.status === 200) {
+    window.location.href = '/';
+    localStorage.clear();
+  }
+  return res.data;
+});
 
 export const verifyUserOtp = asyncHandler(async (email, otp) => {
   const res = await api.post('/api/user/verify-otp', {
